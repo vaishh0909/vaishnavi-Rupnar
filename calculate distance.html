@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculate Distance</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f6f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      background-color: #f5b200;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+
+    .result span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Calculate Distance</h2>
+    <label for="source">Source City</label>
+    <input type="text" id="source" value="Pune, Maharashtra, India">
+
+    <label for="destination">Destination City</label>
+    <input type="text" id="destination" value="Mumbai, Maharashtra, India">
+
+    <button onclick="showResult()">Calculate</button>
+
+    <div class="result" id="result" style="display:none;">
+      <p><span>Source City:</span> Pune, Maharashtra, India</p>
+      <p><span>Destination City:</span> Mumbai, Maharashtra, India</p>
+      <p><span>Travel Duration (Apprx.):</span> 2 Hours 53 Mins</p>
+      <p><span>Distance:</span> 157 Km</p>
+    </div>
+  </div>
+
+  <script>
+    function showResult() {
+      document.getElementById('result').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

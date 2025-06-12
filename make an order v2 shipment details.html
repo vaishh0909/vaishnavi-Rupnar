@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enter Shipment Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .form-group > div {
+      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+    }
+
+    .upload-section {
+      margin-top: 15px;
+    }
+
+    .special-instructions {
+      margin-top: 15px;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ccc;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Enter Shipment Details</h2>
+
+  <div class="form-group">
+    <div>
+      <label for="package-type">Package Type</label>
+      <select id="package-type">
+        <option>Select</option>
+        <option>Box</option>
+        <option>Pallet</option>
+        <option>Crate</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="total-weight">Total Weight</label>
+      <input type="number" id="total-weight" placeholder="kg">
+    </div>
+
+    <div>
+      <label for="dimensions">Dimensions</label>
+      <input type="text" id="dimensions" placeholder="L x W x H">
+    </div>
+
+    <div>
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity">
+    </div>
+
+    <div>
+      <label for="declared-value">Declared Value of Goods (₹)</label>
+      <input type="number" id="declared-value">
+    </div>
+  </div>
+
+  <div class="checkbox-group">
+    <label><strong>Handling Requirements</strong></label>
+    <label><input type="checkbox"> Fragile</label>
+    <label><input type="checkbox"> Keep Upright</label>
+    <label><input type="checkbox"> Refrigerated</label>
+    <label><input type="checkbox"> Hazardous</label>
+    <label><input type="checkbox"> Stackable</label>
+    <label><input type="checkbox"> Non-Stackable</label>
+  </div>
+
+  <div class="upload-section">
+    <label><strong>Package Images</strong></label>
+    <input type="file" accept="image/*">
+  </div>
+
+  <div class="special-instructions">
+    <label for="instructions"><strong>Special Instructions (Optional)</strong></label>
+    <textarea id="instructions" rows="4" placeholder="Any notes for the delivery partner..."></textarea>
+  </div>
+
+  <div class="submit-btn">
+    <button>Continue</button>
+  </div>
+</div>
+
+</body>
+</html>

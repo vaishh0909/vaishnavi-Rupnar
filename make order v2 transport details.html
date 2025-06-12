@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Make an Order</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    select, input[type="date"], input[type="time"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+    }
+
+    .summary {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    button {
+      width: 48%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ccc;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Enter Transport Details</h2>
+
+    <label for="shipment-date">Select Shipment Date</label>
+    <input type="date" id="shipment-date" />
+
+    <label for="shipment-time">Select Shipment Time</label>
+    <input type="time" id="shipment-time" />
+
+    <label for="transfer-type">Transfer Type</label>
+    <select id="transfer-type">
+      <option>One way</option>
+      <option>Round trip</option>
+    </select>
+
+    <label for="waiting-hours">Extra Waiting Hours</label>
+    <select id="waiting-hours">
+      <option>No Waiting</option>
+      <option>1 hour</option>
+      <option>2 hours</option>
+      <option>3 hours</option>
+    </select>
+
+    <div class="summary">
+      <p>Total Distance - 100km</p>
+      <p>Total Time - 2 hours 53 minutes</p>
+    </div>
+
+    <div class="buttons">
+      <button>Back</button>
+      <button>Continue</button>
+    </div>
+  </div>
+
+</body>
+</html>
